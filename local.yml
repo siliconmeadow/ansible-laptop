@@ -1,9 +1,8 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install package pkgbrowser from repo
+  - name: Install packages
     pacman: name={{item}}
     with_items:
       - pkgbrowser
       - firefox
-    state: present

@@ -3,4 +3,5 @@
     name:
       - pkgbrowser
       - firefox
+      - mc
     state: present

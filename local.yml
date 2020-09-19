@@ -2,7 +2,8 @@
   become: true
   tasks:
   - name: Install packages
-    pacman: name={{item}}
-    with_items:
-      - pkgbrowser
-      - firefox
+    pacman:
+      name:
+        - pkgbrowser
+        - firefox
+      state: present

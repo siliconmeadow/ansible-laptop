@@ -2,6 +2,8 @@
   become: true
   tasks:
   - name: Install package pkgbrowser from repo
-    pacman:
-      name: pkgbrowser
-      state: present
+    pacman: name={{item}}
+    with_items:
+      - pkgbrowser
+      - firefox
+    state: present

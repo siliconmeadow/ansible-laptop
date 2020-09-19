@@ -1,7 +1,17 @@
 - name: Install packages
   pacman:
     name:
-      - pkgbrowser
-      - firefox
-      - mc
+      - accerciser
+      - acpi
+      - acpid
+      - adapta-maia-theme
+      - alsa-firmware
+      - alsa-utils
+      - amd-ucode
+      - ansible
+      - asunder
+      - audacity
+      - autoconf
+      - automake
+      - avahi
     state: present

@@ -1,9 +1,10 @@
 - hosts: localhost
   become: true
-  tasks:
-  - name: Install packages
+  pre-tasks:
+  - name: Update repositories
     pacman:
-      name:
-        - pkgbrowser
-        - firefox
-      state: present
+      update_cache: yes
+      changed_when: false
+  tasks:
+    - include: tasks/packages.yml
+    - include: tasks/users.yml
